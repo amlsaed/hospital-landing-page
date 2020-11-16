@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!----------Meta Tag-------->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Nischitcho Hospital</title>
+    <link rel="shortcut icon" href="./imgs/4.png" />
+    
+    <!---------Style-------->
+    <!--owl carousel --------------- -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+   <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <!------------Font Aswame5		-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css    " />
+    
+    <!-------Bootstrap.CSS V4.1.3------------->
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    
+    <!-------Custme-Css---------->
+    <link rel="stylesheet" href="css/style.css"/>
+    <style>
+        .img0{
+            width:600px;
+            height: 300px;
+            background-color: red;
+            position: relative;
+            background: url(./imgs/before.jpg);
+
+
+        }
+        #img1{
+            position: absolute;
+            height:300px;
+            width: 300px;
+            background: red;
+            max-width: 600px!important;
+            right: 0;
+        }
+        button{
+            position: absolute;
+            z-index: 1000;
+            right: 50%;
+        }
+ 
+    </style>
+</head>
+<body >
+
+<!-- Draggable DIV -->
+<div onmousemove="move()" class="img0">
+
+     <div id="img1" draggable="false"></div>
+     <button onmousedown="cl = true;" onmouseup="cl = false" id="butt">drag</button>
+
+</div>
+   
+
+<!--image ----------------------------- -->
+<script>
+  var cl = false;
+  var img1 = document.getElementById("img1");
+  var butt = document.getElementById("butt");
+  function move(){
+      if(cl){
+        var left = window.event.clientX -20 ;
+        var top = window.event.clientY -20;
+        
+        img1.style.left = left + "px";
+        butt.style.left = left + "px";
+        
+        
+      }
+  }
+
+
+</script>
+
+    <!---------------------Libraries---------------------->
+
+		<!-------------jQuery---------->
+		<script src="js/jquery-3.3.1.min.js"></script>
+		
+		<!-------Popper.js------------->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        
+        <!-- owl carousel -------------------->
+        <script src="js/owl.carousel.min.js"></script>
+		<!----------BootStrap---------->
+        <script src="js/bootstrap.min.js"></script>
+        
+		
+		<!--------Main js--->
+		<script src="js/main.js"></script>
+		
+</body>
+</html>    
