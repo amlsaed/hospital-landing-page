@@ -13,6 +13,8 @@
     <!--owl carousel --------------- -->
     <link rel="stylesheet" href="css/owl.carousel.min.css">
    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+   <!---animate.css-------------- -->
+   <link rel="stylesheet" href="css/animate.min.css"/>
     <!------------Font Aswame5		-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css    " />
     
@@ -41,7 +43,7 @@
 
         </div>
         <!-- sec nav -->
-        <nav class="row  sticky-top navbar navbar-expand-lg navbar-light ">
+        <nav class="row  navbar navbar-expand-lg navbar-light " id="navFixed" >
             <!-- nav brand -->
             <div class="col-1  layout"></div>
             <a class="navbar-brand col-4 " href="#" >
@@ -75,7 +77,7 @@
                         <p class="slider-title ">Take best quality</p>
                         <p class="slider-title">
                             treatment for
-                             <span>Crutches</span>
+                             <span id="herotitle" class="animated rollOut infinte">Crutches</span>
                             </p> 
                         <p class="slider-words pt-5">
                          The art of medicine consists in amusing the patient while nature cures the disease. 
@@ -146,7 +148,7 @@
             <div class="row">
                 <div class="col-md-8">
                     <div>
-                        <h3 class="about-title2"> A hospital is a health care institution</h3>
+                        <h3 class="about-title2 "> A hospital is a health care institution</h3>
                         <h3 class="about-title2">providing patient treatment with</h3>
                         <h3 class="about-title2">specialized medical</h3>
                         <p class="about-first-paragraph pt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
@@ -179,12 +181,12 @@
                    
         
                 </div>
-                 <div class="col-md-4 about-table">
+                 <div class="col-md-4 about-table animated backInRight">
                      <div class="container">
                          <div class="row">
                              <div class="col-md">
                                 <h3 class="about-table-title">Weekly Timetable</h3>
-                                <ul class="about-timetable">
+                                <ul class="about-timetable ">
                                     <li>
                                         <span>Monday</span>
                                         <span>8:00am–7:00pm</span>
@@ -574,7 +576,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="owl-carousel container">
+        <div class="owl-carousel container" id="owl-carousel1">
             <!-- owl item  -->
             <div> 
                 <div class="doctors-detail text-center">
@@ -776,11 +778,117 @@
             <p class="gallery-first-paragraph pb-4"> Lorem Ipsum the industry's standard dummy text.</p>
         </div>
     </div>
+    <div class="row ">
+        <div class="container ">
+            <div class="row py-1 gallery-nav-container">
+                <div class="col gallery-nav">
+                    <ul class="row nav nav-tabs " id="nav-tab" role="tablist">
+                        <li class="col nav-item " role="presentation">
+                          <a class="nav-link active" id="All-tab" data-toggle="tab" href="#All" role="tab" aria-controls="All" aria-selected="true">All</a>
+                        </li>
+                        <li class="col nav-item" role="presentation">
+                          <a class="nav-link" id="Cardiology-tab" data-toggle="tab" href="#Cardiology" role="tab" aria-controls="Cardiology" aria-selected="false">Cardiology</a>
+                        </li>
+                        <li class="col nav-item" role="presentation">
+                          <a class="nav-link" id="Neurology-tab" data-toggle="tab" href="#Neurology" role="tab" aria-controls="Neurology" aria-selected="false">Neurology</a>
+                        </li>
+                        <li class="col nav-item" role="presentation">
+                            <a class="nav-link" id="Urology-tab" data-toggle="tab" href="#Urology" role="tab" aria-controls="Urology" aria-selected="true">Urology</a>
+                          </li>
+                          <li class="col nav-item" role="presentation">
+                            <a class="nav-link" id="Pulmonary-tab" data-toggle="tab" href="#Pulmonary" role="tab" aria-controls="Pulmonary" aria-selected="false">Pulmonary</a>
+                          </li>
+                          <li class="col nav-item" role="presentation">
+                            <a class="nav-link" id="Traumatology-tab" data-toggle="tab" href="#Traumatology" role="tab" aria-controls="Traumatology" aria-selected="false">Traumatology</a>
+                          </li>
+                      </ul>
+        
+                </div>
+            </div>
+            
+           
+              <div class="row tab-content mt-5" id="nav-tabContent">
+                <div class="container tab-pane fade show active" id="All" role="tabpanel" aria-labelledby="All-tab">
+                    <div class="row  ">
+                        <div class="col  gallery-col">
+                            <div class="row py-3 gallery-row">
+                                <a href="#" class="gallery-pic ">
+                                    <img src="./imgs/project1.jpg" alt="img"/>
+                                    <div class="gallery-link-overlay">
+                                        <button class="btn"><i class="fas fa-arrows-alt"></i></button>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="row py-3 gallery-row">
+                                <a href="#">
+                                    <img src="./imgs/project4.jpg" alt="img"/>
+                                    <div class="gallery-link-overlay">
+                                        <button class="btn"><i class="fas fa-arrows-alt"></i></button>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col  gallery-col">
+
+                            <div class="row py-3 gallery-row">
+                                <a href="#">
+                                    <img src="./imgs/project2.jpg" alt="img"/>
+                                    <div class="gallery-link-overlay">
+                                        <button class="btn"><i class="fas fa-arrows-alt"></i></button>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="row py-3 gallery-row">
+                                <a href="#">
+                                    <img src="./imgs/project5.jpg" alt="img"/>
+                                    <div class="gallery-link-overlay">
+                                        <button class="btn"><i class="fas fa-arrows-alt"></i></button>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="row py-3 gallery-row">
+                                <a href="#">
+                                    <img src="./imgs/project6.jpg" alt="img"/>
+                                    <div class="gallery-link-overlay">
+                                        <button class="btn"><i class="fas fa-arrows-alt"></i></button>
+                                    </div>
+                                </a>
+                                </div>
+                        </div>
+                        <div class="col gallery-col ">
+                            <div class="row py-3 gallery-row" >
+                                <a href="#"><img src="./imgs/project3.jpg" alt="img"/>
+                                    <div class="gallery-link-overlay">
+                                        <button class="btn"><i class="fas fa-arrows-alt"></i></button>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="row py-4 gallery-row"><a href="#">
+                                <img src="./imgs/project7.jpg" alt="img"/>
+                                <div class="gallery-link-overlay">
+                                    <button class="btn"><i class="fas fa-arrows-alt"></i></button>
+                                </div>
+                            </a>
+                            </div>
+    
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="container tab-pane fade" id="Cardiology" role="tabpanel" aria-labelledby="Cardiology">Cardiology</div>
+                <div class="container tab-pane fade" id="Neurology" role="tabpanel" aria-labelledby="Neurology-tab">Neurology</div>
+                <div class="container tab-pane fade" id="Urology" role="tabpanel" aria-labelledby="Urology-tab">Urology</div>
+                <div class="container tab-pane fade" id="Pulmonary" role="tabpanel" aria-labelledby="Pulmonary">Pulmonary</div>
+                <div class="container tab-pane fade" id="Traumatology" role="tabpanel" aria-labelledby="Traumatology-tab">Traumatology</div>
+              </div>
+        </div>
+
+    </div>
 </section>
     <!-- after-before --------------------------------------------------------------------------->
 <section class="container-fluid after-before" id="after-before">
     <div class="row">
-        <div class="col-md text-center ">
+        <div class="col-md text-center mt-5">
             <h3 class="after-before-title">Before and after procedures</h3>
             <div class="after-before-logo-container">
                 <img class="after-before-logo" src="imgs/4.png" alt="logo">
@@ -788,6 +896,18 @@
             <p class="after-before-first-paragraph  pt-4 ">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             <p class="after-before-first-paragraph pb-4"> Lorem Ipsum the industry's standard dummy text.</p>
         </div>
+    </div>
+    <div class="row ">
+       <div class="col ">
+           <div class="after-before-drag-bg" id="parentDrag">
+               <div class="after-before-drag-btn">
+                   <button id="btnDrag"><i class="fas fa-arrows-alt-h"></i></button>
+               </div>
+               <div class="after-before-drag-img" id="imdToDrag">
+                <!-- <img src="./imgs/after.jpg" alt=after/> -->
+            </div>
+           </div>
+       </div>
     </div>
 </section>
  <!-- clients --------------------------------------------------------------------------->
@@ -802,10 +922,132 @@
             <p class="clients-first-paragraph pb-4"> Lorem Ipsum the industry's standard dummy text.</p>
         </div>
     </div>
+    <div class="row">
+        <div class="owl-carousel container" id="owl-carousel2">
+            <!-- owl item 1 -->
+                <div class="people-say-slider text-center animated slideInLeft">
+                        <img src="./imgs/avatar1.png" class="img-fluid " >
+                        <h4>francis jara</h4>
+                        <h6>biographer</h6>
+                        <p>
+                            Lorem Ipsum is simply dummy 
+                            text of the printing and typesetting industry.
+                            Lorem Ipsum the industry's standard dummy text.
+                        </p>   
+                        <div>
+                            <i class="fas fa-quote-right"></i>
+                        </div>                    
+                </div>
+                <!-- owl item 2 -->
+                <div class="people-say-slider text-center">
+                    <img src="./imgs/avatar3.png" class="img-fluid" >
+                    <h4>francis jara</h4>
+                    <h6>biographer</h6>
+                    <p>
+                        Lorem Ipsum is simply dummy 
+                        text of the printing and typesetting industry.
+                        Lorem Ipsum the industry's standard dummy text.
+                    </p>  
+                    <div>
+                        <i class="fas fa-quote-right"></i>
+                    </div>                      
+            </div>
+            <!-- owl item3  -->
+            <div class="people-say-slider text-center animated slideInRight">
+                <img src="./imgs/avatar4.png" class="img-fluid" >
+                <h4>francis jara</h4>
+                <h6>biographer</h6>
+                <p>
+                    Lorem Ipsum is simply dummy 
+                    text of the printing and typesetting industry.
+                    Lorem Ipsum the industry's standard dummy text.
+                </p> 
+                <div>
+                    <i class="fas fa-quote-right"></i>
+                </div>                       
+        </div>
+            <!-- owl item 4 -->
+            <div class="people-say-slider text-center">
+                <img src="./imgs/avatar1.png" class="img-fluid" >
+                <h4>francis jara</h4>
+                <h6>biographer</h6>
+                <p>
+                    Lorem Ipsum is simply dummy 
+                    text of the printing and typesetting industry.
+                    Lorem Ipsum the industry's standard dummy text.
+                </p>   
+                <div>
+                    <i class="fas fa-quote-right"></i>
+                </div>                     
+        </div>
+        <!-- owl item 5 -->
+        <div class="people-say-slider text-center">
+            <img src="./imgs/avatar3.png" class="img-fluid" >
+            <h4>francis jara</h4>
+            <h6>biographer</h6>
+            <p>
+                Lorem Ipsum is simply dummy 
+                text of the printing and typesetting industry.
+                Lorem Ipsum the industry's standard dummy text.
+            </p>  
+            <div>
+                <i class="fas fa-quote-right"></i>
+            </div>                      
+    </div>
+    <!-- owl item 5 -->
+    <div class="people-say-slider text-center">
+        <img src="./imgs/avatar4.png" class="img-fluid" >
+        <h4>francis jara</h4>
+        <h6>biographer</h6>
+        <p>
+            Lorem Ipsum is simply dummy 
+            text of the printing and typesetting industry.
+            Lorem Ipsum the industry's standard dummy text.
+        </p>   
+        <div>
+            <i class="fas fa-quote-right"></i>
+        </div>                     
+    </div>
+        </div>
+    </div>
 </section>
 <!-- countdown --------------------------------------------------------------------------->
-<section class="countdown" id="countdown">
-    countdown
+<section class="container-fluid countdown" id="countdown">
+    <div class="row countdown-row">
+        <div class="col-md text-center count-table">
+            <div class="row ">
+                <div class="col-md countdown-part">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h2 class="exp-count counting"></h2>
+                    <p>Years of experience</p>
+                </div>
+                <div class="col-md countdown-part">
+                    <i class="far fa-grin-hearts"></i>
+                    <h2 class="pat-count"></h2>
+                    <p>Happy Patients  </p>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-md countdown-part">
+                    <i class="fas fa-user-md"></i>
+                    <h2 class="doc-count"></h2>
+                    <p>Qualified Doctors</p>
+                </div>
+                <div class="col-md countdown-part">
+                    <i class="far fa-hospital"></i>
+                    <h2 class="hos-count"></h2>
+                    <p>Hospital Rooms</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md countdown-video">
+            <div class="countdown-video-i text-center">
+                <i class="fas fa-play"></i>
+            </div>
+            
+        </div>
+
+    </div>
 </section>
  <!-- pricing --------------------------------------------------------------------------->
  <section class="pricing" id="pricing">
@@ -819,10 +1061,242 @@
             <p class="pricing-first-paragraph pb-4"> Lorem Ipsum the industry's standard dummy text.</p>
         </div>
     </div>
+    <div class="row px-5 mx-5">
+        <div class="owl-carousel" id="owl-carousel3">
+            <!-- owl item -->
+            <div class="price-item">
+                <div class="text-center pricing-card">
+                         <div class="price-title">
+                             <h2>$150</h2>
+                         </div>
+                         <div class="pricing-info text-center">
+                             <h4>Hemoglobin Test</h4>
+                             <ul>
+                                <li><i class="fas fa-check"></i> First description</li>
+                                <li><i class="fas fa-check"></i> second description</li>
+                                <li><i class="fas fa-check"></i> third description</li>
+                                <li><i class="fas fa-times"></i> fourth description</li>
+                                <li><i class="fas fa-times"></i> Fifth description</li>
+                            </ul>
+                         </div>
+                         <button class="pricing-contact btn w-50 mx-auto">Contact Now</button>
+                </div>
+            </div>
+            <!-- owl item -->
+            <div class="price-item">
+                <div class="text-center pricing-card">
+                         <div class="price-title">
+                             <h2>$150</h2>
+                         </div>
+                         <div class="pricing-info text-center">
+                             <h4>Hemoglobin Test</h4>
+                             <ul>
+                                <li><i class="fas fa-check"></i> First description</li>
+                                <li><i class="fas fa-check"></i> second description</li>
+                                <li><i class="fas fa-check"></i> third description</li>
+                                <li><i class="fas fa-times"></i> fourth description</li>
+                                <li><i class="fas fa-times"></i> Fifth description</li>
+                            </ul>
+                         </div>
+                         <button class="pricing-contact btn w-50 mx-auto">Contact Now</button>
+                </div>
+            </div>
+            <!-- owl item -->
+            <div class="price-item">
+                <div class="text-center pricing-card">
+                         <div class="price-title">
+                             <h2>$150</h2>
+                         </div>
+                         <div class="pricing-info text-center">
+                             <h4>Hemoglobin Test</h4>
+                             <ul>
+                                <li><i class="fas fa-check"></i> First description</li>
+                                <li><i class="fas fa-check"></i> second description</li>
+                                <li><i class="fas fa-check"></i> third description</li>
+                                <li><i class="fas fa-times"></i> fourth description</li>
+                                <li><i class="fas fa-times"></i> Fifth description</li>
+                            </ul>
+                         </div>
+                         <button class="pricing-contact btn w-50 mx-auto">Contact Now</button>
+                </div>
+            </div>
+            <!-- owl item -->
+            <div class="price-item">
+                <div class="text-center pricing-card">
+                         <div class="price-title">
+                             <h2>$150</h2>
+                         </div>
+                         <div class="pricing-info text-center">
+                             <h4>Hemoglobin Test</h4>
+                             <ul>
+                                <li><i class="fas fa-check"></i> First description</li>
+                                <li><i class="fas fa-check"></i> second description</li>
+                                <li><i class="fas fa-check"></i> third description</li>
+                                <li><i class="fas fa-times"></i> fourth description</li>
+                                <li><i class="fas fa-times"></i> Fifth description</li>
+                            </ul>
+                         </div>
+                         <button class="pricing-contact btn w-50 mx-auto">Contact Now</button>
+                </div>
+            </div>
+            <!-- owl item -->
+            <div class="price-item">
+                <div class="text-center pricing-card">
+                         <div class="price-title">
+                             <h2>$150</h2>
+                         </div>
+                         <div class="pricing-info text-center">
+                             <h4>Hemoglobin Test</h4>
+                             <ul>
+                                <li><i class="fas fa-check"></i> First description</li>
+                                <li><i class="fas fa-check"></i> second description</li>
+                                <li><i class="fas fa-check"></i> third description</li>
+                                <li><i class="fas fa-times"></i> fourth description</li>
+                                <li><i class="fas fa-times"></i> Fifth description</li>
+                            </ul>
+                         </div>
+                         <button class="pricing-contact btn w-50 mx-auto">Contact Now</button>
+                </div>
+            </div>
+            <!-- owl item -->
+            <div class="price-item">
+                <div class="text-center pricing-card">
+                         <div class="price-title">
+                             <h2>$150</h2>
+                         </div>
+                         <div class="pricing-info text-center">
+                             <h4>Hemoglobin Test</h4>
+                             <ul>
+                                <li><i class="fas fa-check"></i> First description</li>
+                                <li><i class="fas fa-check"></i> second description</li>
+                                <li><i class="fas fa-check"></i> third description</li>
+                                <li><i class="fas fa-times"></i> fourth description</li>
+                                <li><i class="fas fa-times"></i> Fifth description</li>
+                            </ul>
+                         </div>
+                         <button class="pricing-contact btn w-50 mx-auto">Contact Now</button>
+                </div>
+            </div>
+            <!-- owl item -->
+            <div class="price-item">
+                <div class="text-center pricing-card">
+                         <div class="price-title">
+                             <h2>$150</h2>
+                         </div>
+                         <div class="pricing-info text-center">
+                             <h4>Hemoglobin Test</h4>
+                             <ul>
+                                <li><i class="fas fa-check"></i> First description</li>
+                                <li><i class="fas fa-check"></i> second description</li>
+                                <li><i class="fas fa-check"></i> third description</li>
+                                <li><i class="fas fa-times"></i> fourth description</li>
+                                <li><i class="fas fa-times"></i> Fifth description</li>
+                            </ul>
+                         </div>
+                         <button class="pricing-contact btn w-50 mx-auto">Contact Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 <!-- questions ------------------------------------------------------------------------------->
-<section class="questions" id="questions">
-just answer
+<section class="container-fluid questions" id="questions">
+     <div class="row questions-row  ">
+         <div class="col-md px-5">
+             <img src="./imgs/faq-img.png" class="w-75 py-5 "/>
+         </div>
+         <div class="col md">
+             <h3 class="mt-5">Just Answer the Questions</h3>
+             <div class="accordion" id="accordionExample">
+            <!-- item 1--------------------------------------- -->
+            <div class="card mb-3">
+              <div class="card-header" id="headingOne">
+                <h2>
+                  <button class="btn text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    What is Medi solution?
+                  </button>
+                </h2>
+              </div>
+          
+              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                    Lorem Ipsum is simply dummy text of the printing
+                    and typesetting industry. Lorem Ipsum has been the industry's 
+                    standard dummy text ever since when an unknown printer
+                    took a galley of type and scrambled it to make a type specimen book.                 </div>
+              </div>
+            </div>
+            <!-- item 2------------------------------------ -->
+            <div class="card mb-3">
+              <div class="card-header" id="headingTwo">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    How do I get a refill on my prescription?
+                 </button>
+                </h2>
+              </div>
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                    Lorem Ipsum is simply dummy text of the printing
+                     and typesetting industry. Lorem Ipsum has been the industry's 
+                     standard dummy text ever since when an unknown printer
+                     took a galley of type and scrambled it to make a type specimen book.   
+                 </div>
+              </div>
+            </div>
+            <!-- item 3------------------------------------ -->
+            <div class="card mb-3">
+              <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    How competent our total treatment? 
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                    Lorem Ipsum is simply dummy text of the printing
+                    and typesetting industry. Lorem Ipsum has been the industry's 
+                    standard dummy text ever since when an unknown printer
+                    took a galley of type and scrambled it to make a type specimen book.                 </div>
+              </div>
+            </div>
+            <!-- item4------------------------------------- -->
+            <div class="card mb-3">
+                <div class="card-header" id="headingfour">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
+                        If I get sick what should I do?
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapsefour" class="collapse" aria-labelledby="headingfour" data-parent="#accordionExample">
+                  <div class="card-body">
+                    Lorem Ipsum is simply dummy text of the printing
+                    and typesetting industry. Lorem Ipsum has been the industry's 
+                    standard dummy text ever since when an unknown printer
+                    took a galley of type and scrambled it to make a type specimen book.                   </div>
+                </div>
+              </div>
+              <!--collapse 5 ------------------------------ -->
+              <div class="card mb-3">
+                <div class="card-header" id="headingfive">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                        What is emergency cary to your hospital?
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapsefive" class="collapse" aria-labelledby="headingfive" data-parent="#accordionExample">
+                  <div class="card-body">
+                    Lorem Ipsum is simply dummy text of the printing
+                    and typesetting industry. Lorem Ipsum has been the industry's 
+                    standard dummy text ever since when an unknown printer
+                    took a galley of type and scrambled it to make a type specimen book.                   </div>
+                </div>
+              </div>
+          </div></div>
+     </div>
 </section>
 <!-- subscribe ------------------------------------------------------------------------------->
 <section class="container-fluid subscribe" id="subscribe">
@@ -836,6 +1310,26 @@ just answer
             <p class="subscribe-first-paragraph pb-4"> Lorem Ipsum the industry's standard dummy text.</p>
         </div>
     </div>
+    <div class="row subscribe-form">
+        <div class="col">
+            <form class="mx-auto w-50">
+                <div class="form-row ">
+                    
+                  <div class="form-group col-10">
+                    <input type="email" class="form-control "  id="inputEmail">
+                  </div>
+                  <div class="form-group col-md-2">
+                    <button type="submit" class=" "> <i class="fas fa-paper-plane"></i></button>
+                  </div>
+                  </div>
+                  </form>
+        </div>
+        </div>
+        <div class="row text-center subscribe-tel">
+            <div class="col">
+            <h2>(+01) - 234 567 890</h2>
+            </div>
+          </div>
 </section>
 <!-- blog ------------------------------------------------------------------------------->
 <section class="container-fluid blog" id="blog">
@@ -849,10 +1343,151 @@ just answer
             <p class="blog-first-paragraph pb-4"> Lorem Ipsum the industry's standard dummy text.</p>
         </div>
     </div>
+    <div class="row blog-item-row">
+        <!-- blog 1 -->
+        <div class="col-md  blog-item">
+            
+            <div class="blog-img">
+                <a href="#">
+                    <img src="./imgs/blog2.jpg">
+                    <div class="text-center">
+                        <span>
+                            <i class="fas fa-link "></i>
+                        </span>
+                    </div>
+                </a>
+            </div>
+            
+                <h2 class="blog-adress my-2">
+                    <a href="#">
+                        Working in emergency medicine
+                    </a>
+                </h2>
+            <ul>
+                <li>Aug 21, 2020</li>
+                <li>|</li>
+                <li>Posted by:<a href="#"> James Lewis</a></li>
+            </ul>
+            <p>
+                Lorem Ipsum is simply dummy text of the print ing and typesetting industry. 
+                lorem Ipsum the industry's standard dummy text.
+            </p>
+
+            <button class="mx-auto btn">
+                Read more
+            </button>
+        </div>
+        <!-- blog 2 -->
+        <div class="col-md  blog-item">
+            
+            <div class="blog-img">
+                <a href="#">
+                    <img src="./imgs/blog2.jpg">
+                    <div class="text-center">
+                        <span>
+                            <i class="fas fa-link "></i>
+                        </span>
+                    </div>
+                </a>
+            </div>
+            
+                <h2 class="blog-adress my-2">
+                    <a href="#">
+                        Working in emergency medicine
+                    </a>
+                </h2>
+            <ul>
+                <li>Aug 21, 2020</li>
+                <li>|</li>
+                <li>Posted by:<a href="#"> James Lewis</a></li>
+            </ul>
+            <p>
+                Lorem Ipsum is simply dummy text of the print ing and typesetting industry. 
+                lorem Ipsum the industry's standard dummy text.
+            </p>
+
+            <button class="mx-auto btn">
+                Read more
+            </button>
+        </div>
+        <!-- blog 3 -->
+        <div class="col-md  blog-item">
+            
+            <div class="blog-img">
+                <a href="#">
+                    <img src="./imgs/blog2.jpg">
+                    <div class="text-center">
+                        <span>
+                            <i class="fas fa-link "></i>
+                        </span>
+                    </div>
+                </a>
+            </div>
+            
+                <h2 class="blog-adress my-2">
+                    <a href="#">
+                        Working in emergency medicine
+                    </a>
+                </h2>
+            <ul>
+                <li>Aug 21, 2020</li>
+                <li>|</li>
+                <li>Posted by:<a href="#"> James Lewis</a></li>
+            </ul>
+            <p>
+                Lorem Ipsum is simply dummy text of the print ing and typesetting industry. 
+                lorem Ipsum the industry's standard dummy text.
+            </p>
+
+            <button class="mx-auto btn">
+                Read more
+            </button>
+        </div>
+        
+    </div>
 </section>
  <!-- services --------------------------------------------------------------------------->
- <section class="services" id="services">
-    services
+ <section class="container-fluid services" id="services">
+    <div class="row row-service">
+          <div class="owl-carousel" id="owl-carousel4">
+              <!-- owl item -->
+              <div>
+                  <div class="service-item srvice1 text-center center-block">
+                    <img src="imgs/client1.png" >
+                  </div>
+              </div>
+              <div>
+                <div class="service-item srvice2 text-center center-block">
+                  <img src="imgs/client2.png" >
+                </div>
+            </div>
+            <div>
+                <div class="service-item srvice3 text-center center-block">
+                  <img src="imgs/client3.png" >
+                </div>
+            </div>
+            <div>
+                <div class="service-item srvice4 text-center center-block">
+                  <img src="imgs/client4.png" >
+                </div>
+            </div>
+            <div>
+                <div class="service-item srvice1 text-center center-block">
+                  <img src="imgs/client5.png" >
+                </div>
+            </div>
+            <div>
+                <div class="service-item srvice2 text-center center-block">
+                  <img src="imgs/client1.png" >
+                </div>
+            </div>
+            <div>
+                <div class="service-item srvice3 text-center center-block">
+                  <img src="imgs/client4.png" >
+                </div>
+            </div>
+          </div>
+    </div>
 </section>
     <!-- contact --------------------------------------------------------------------------->
 <section class="container-fluid contact" id="contact">
@@ -863,13 +1498,123 @@ just answer
                 <img class="contact-logo" src="imgs/4.png" alt="logo">
             </div>
             <p class="contact-first-paragraph  pt-4 ">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            <p class="contact-first-paragraph pb-4"> Lorem Ipsum the industry's standard dummy text.</p>
+            <p class="contact-first-paragraph pb-4"> Lorem Ipsum the industry's standard dummy text.111</p>
         </div>
     </div>
+    <div class="row contact-bg">
+        <form class="mx-auto w-75">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputname">your name</label>
+                        <input type="text" class="form-control" placeholder="First name" id="inputname">
+                      </div>
+              <div class="form-group col-md-6">
+                <label for="contact-inputEmail">Email</label>
+                <input type="email" class="form-control" placeholder="email" id="contact-inputEmail">
+              </div>
+              
+            </div>
+            <div class="form-row">
+                
+              <div class="form-group col-md-6">
+                <label for="contact-contact-inputphone">subject</label>
+                <input type="text" class="form-control" placeholder="subject" id="contact-inputbookingdate">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="contact-inputphone">your num</label>
+                    <input type="tel" class="form-control" placeholder="+020 10000000" id="contact-inputphone">
+                  </div>
+              
+            </div>
+           
+            <div class="form-row">
+                <div class="form-group col-12">
+                    <label for="contact-inputmessage">message</label>
+                    <textarea class="form-control" placeholder="your message" id="contact-inputmessage" rows="4"></textarea>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-2">
+                    <button type="submit" class="form-control btn form-btn">
+                          send message
+                    </button>
+                </div>
+              
+            </div>
+        </form>
+    </div>
+   
 </section>
     <!-- footer -->
-<footer>
-9
+<footer class="container-flui">
+    <div class="row first-footer">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d218360.36365557695!2d29.81479852165277!3d31.224034932846752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f5c49126710fd3%3A0xb4e0cda629ee6bb9!2sAlexandria%2C%20Alexandria%20Governorate!5e0!3m2!1sen!2seg!4v1606076939108!5m2!1sen!2seg" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+    <div class="row middel-footer">
+        <div class="col-md a-middel-footer">
+            <img src="./imgs/footer-logo.png">
+            <p>
+                Lorem ipsum dolor sit consectet adipisicing 
+                sed do eiusmod temp incididunt ut labore. 
+                Lorem Ipsum is simply dummy.
+            </p>
+            <ul>
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            </ul>
+        </div>
+        <div class="col-md b-middel-footer">
+            <h5>Useful Links</h5>
+            <ul>
+                <li><a href="#"><i class="fas fa-chevron-right"></i>FAQs</a></li>
+                <li><a href="#"><i class="fas fa-chevron-right"></i>Blog</a></li>
+                <li><a href="#"><i class="fas fa-chevron-right"></i>Weekly timetable</a></li>
+                <li><a href="#"><i class="fas fa-chevron-right"></i>Terms & Conditions</a></li>
+                
+            </ul>
+            
+        </div>
+        <div class="col-md c-middel-footer">
+            <h5>Departments</h5>
+            <ul>
+                <li><a href="#"><i class="fas fa-chevron-right"></i>Rehabilitation</a></li>
+                <li><a href="#"><i class="fas fa-chevron-right"></i>Laboratory Analysis</a></li>
+                <li><a href="#"><i class="fas fa-chevron-right"></i>Face Lift Surgery</a></li>
+                <li><a href="#"><i class="fas fa-chevron-right"></i>Liposuction</a></li>
+                
+            </ul>
+        </div>
+        <div class="col-md d-middel-footer">
+            <h5>Contact</h5>
+            <ul>
+                <li>
+                    <strong>Adress:</strong>
+                    1223 Fulton Street San Diego CA 941-23 USA
+                   
+                </li>
+                <li>
+                    <strong>Email</strong>
+                    nischinto@Gmail.Com
+                </li>
+                <li>
+                    <strong>Phone</strong>
+                    (+01) - 234 567 890
+                    (+01) - 345 678 901
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row text-center last-footer">
+        <div class="col-md-6">Copyright 2020. Design by Amlsaed</div>
+        <div class="col-md-6">
+            <a href="#home"><i class="fas fa-angle-up"></i></a>
+        </div>
+    </div>
+    
+  
 </footer>
 
 

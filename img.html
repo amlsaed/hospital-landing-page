@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!----------Meta Tag-------->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Nischitcho Hospital</title>
+    <link rel="shortcut icon" href="./imgs/4.png" />
+    
+    <!---------Style-------->
+    <!--owl carousel --------------- -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+   <link rel="stylesheet" href="css/owl.theme.default.min.css">
+   <!---animate.css-------------- -->
+   <link rel="stylesheet" href="css/animate.min.css"/>
+    <!------------Font Aswame5		-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css    " />
+    
+    <!-------Bootstrap.CSS V4.1.3------------->
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    
+    <!-------Custme-Css---------->
+    <link rel="stylesheet" href="css/style.css"/>
+
+<style>
+.main-div{
+    height: 100vh;
+    overflow: hidden;
+    transition: all 1s ease-in-out;
+}
+.main-div:hover .ctrls{
+  display: block;
+}
+.main-div:hover .arrows{
+  display: block;
+}
+.ctrls{
+    position:absolute;
+    z-index: 999;
+    top:10px;
+    right:10px;
+    display: none;
+    transition: all 1s ease-in-out;
+   
+
+}
+.ctrls ul{
+    list-style: none;
+}
+.ctrls button{
+    color: #111;
+    background: transparent;
+    border:none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    outline: none;
+}
+.gallery-slider img{
+    width: 70%;
+    height: 100vh;
+    margin: 0 15%;
+}
+.arrows{
+    position:absolute;
+    z-index: 999;
+    top:50%;
+    cursor: pointer;
+    width: 100%;
+    display: none;
+    transition: all 1s ease-in-out;
+}
+.arrows button{
+    background:transparent;
+    border:none;
+    color:#111;
+    outline: none;
+    cursor: pointer;
+    transition: 1ll 1s ease;
+
+}
+.arrows button:hover{
+    opacity: .7;
+}
+.nextbtn{
+  position:inherit;
+  left:50px;
+}
+.prevbtn{
+    position:inherit;
+  right:80px;
+}
+.socil-share{
+    position:absolute;
+    background: #fff;
+    top:44px;
+    right:20%;
+}
+.socil-share ul{
+    list-style: none;
+    padding-inline-start: 0;
+    padding:15px;
+}
+.socil-share i{
+    height: 20px;
+    width: 20px;
+    border-radius:50% ;
+    background: #333;
+    color:#fff;
+    font-size: 10px;
+    padding: 5px;
+    margin-right:5px
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+
+
+<div class="container-fluid main-div"> 
+    <div class="row">
+          <div class="col">
+            <div class="ctrls" id="ctrls">
+                <ul>
+                    <li>
+                        <!-- share on social media -->
+                        <button><i class="fas fa-share-alt"></i></button>
+                        <!-- zoom out -->
+                        <button><i class="fas fa-search-minus"></i></button>
+                        <!-- zoom in -->
+                        <button><i class="fas fa-search-plus"></i></button>
+                        <!-- full screen -->
+                        <button><i class="fas fa-expand"></i></i></button>
+                        <!-- <button><i class="fas fa-compress"></i></i></button> -->
+                        <!-- play imgs -->
+                        <button><i class="far fa-play-circle"></i></button>
+                        <!-- download -->
+                        <button><i class="far fa-arrow-alt-circle-down"></i></button>
+                        <!-- close -->
+                        <button onclick="window.location.href='file:///home/aml/Desktop/madical%20project/index.html'"><i class="fas fa-times"></i></button>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 gallery-slider" id="gallery-slider">
+               
+                <img src="./imgs/project1.jpg " class="" draggable="false">
+            </div>
+            <div class="arrows">
+                <button class="nextbtn"><i class="fas fa-arrow-left"></i></button>
+                <button class="prevbtn"><i class="fas fa-arrow-right"></i></button>
+            </div>
+          </div>
+    </div>
+    <!-- scial media -->
+    <div class="socil-share">
+        <ul class="">
+            <li><a href="#"><i class="fab fa-facebook-f"></i>facebook</a></li>
+            <li><a href="#"><i class="fab fa-linkedin-in"></i>linkedin</a></li>
+            <li><a href="#"><i class="fab fa-pinterest-p"></i>pinterest</a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i>twitter</a></li>
+        </ul>
+    </div>
+
+    
+</div>
+
+<script>
+    setimg();
+  function setimg(){
+      
+
+  }
+</script>
+
+
+
+<!-- 
+    https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_fullscreen2
+ -->
+
+
+
+    <!---------------------Libraries---------------------->
+
+		<!-------------jQuery---------->
+		<script src="js/jquery-3.3.1.min.js"></script>
+		
+		<!-------Popper.js------------->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        
+        <!-- owl carousel -------------------->
+        <script src="js/owl.carousel.min.js"></script>
+		<!----------BootStrap---------->
+        <script src="js/bootstrap.min.js"></script>
+        
+		
+		<!--------Main js--->
+		
+    </body>
+    </html>

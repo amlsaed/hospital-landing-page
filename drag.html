@@ -21,79 +21,137 @@
     
     <!-------Custme-Css---------->
     <link rel="stylesheet" href="css/style.css"/>
-    <style>
-        .img0{
-            width:600px;
-            height: 300px;
-            background-color: red;
-            position: relative;
-            background: url(./imgs/before.jpg);
-
-
-        }
-        #img1{
-            position: absolute;
-            height:300px;
-            width: 300px;
-            background: red;
-            max-width: 600px!important;
-            right: 0;
-        }
-        button{
-            position: absolute;
-            z-index: 1000;
-            right: 50%;
-        }
- 
-    </style>
+   <style>
+     .after-before-drag-bg0{
+      background: url(./imgs/before.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 780px!important;
+    height: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 10px solid #fff;
+    border-radius: 7px;
+    box-shadow: 0px 2px 9.5px 0.5px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+     }
+     .after-before-drag-img0{
+       min-width: 0;
+       max-width:99%;
+      width: 382px;
+    height: 103%;
+    background:url(./imgs/after.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    position: absolute;
+    border-left: 2px solid #fff;
+    right:0!important;
+    top:0;
+     }
+     .after-before-drag-btn0{
+       background:transparent;
+       width: 100% !important;
+       height: 100%!important;
+       position: relative;
+     }
+     .after-before-drag-btn0 button{
+      font-size: 30px;
+    position: absolute;
+    z-index: 99;
+    color: #000;
+    background-color: #fff;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    padding: 3px 5px;
+    text-align: center;
+    border: none!important;
+    outline: none!important;
+    top: 43%;
+    right:348px;
+     cursor: ew-resize;
+     }
+     .after-before-drag-btn0 button::before{
+       content:'';
+       height: 300px;
+       width:50px ;
+       position: absolute;
+       top: 0;
+       right: 300px;
+       
+     }
+   </style> 
 </head>
 <body >
+  <div class="after-before-drag-bg0"  id="aftercontainer">
+    
+    <div class="after-before-drag-img0" id="afterimg">
+    </div>
 
-<!-- Draggable DIV -->
-<div onmousemove="move()" class="img0">
-
-     <div id="img1" draggable="false"></div>
-     <button onmousedown="cl = true;" onmouseup="cl = false" id="butt">drag</button>
-
-</div>
+    <div class="after-before-drag-btn0" id="parbtn">
+      <button id="ctrlbtn" >
+        <i class="fas fa-arrows-alt-h"></i></button>
+     </div>
+   </div>
    
+ <script>
+dragElement(document.getElementById("afterimg"));
 
-<!--image ----------------------------- -->
-<script>
-  var cl = false;
-  var img1 = document.getElementById("img1");
-  var butt = document.getElementById("butt");
-  function move(){
-      if(cl){
-        var left = window.event.clientX -20 ;
-        var top = window.event.clientY -20;
-        
-        img1.style.left = left + "px";
-        butt.style.left = left + "px";
-        
-        
-      }
+function dragElement(elmnt ) {
+  var ctrlbtn = document.getElementById("ctrlbtn");
+  var aftercontainer = document.getElementById("aftercontainer");
+  var afterimg = document.getElementById("afterimg");
+  
+  var pos1 = 0, pos3 = 0;
+  if (ctrlbtn && afterimg.offsetWidth < 500) {
+    // if present, the header is where you move the DIV from:
+    ctrlbtn.onmousedown = dragMouseDown;
+  } else {
+    // otherwise, move the DIV from anywhere inside the DIV:
+    elmnt.onmousedown = dragMouseDown;
   }
 
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
 
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos3 = e.clientX;
+    // set the element's new position:
+
+    ctrlbtn.style.left =(elmnt.offsetLeft - pos1) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+
+    elmnt.style.width =aftercontainer.offsetWidth - (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    // stop moving when mouse button is released:
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
 </script>
-
+  
     <!---------------------Libraries---------------------->
 
-		<!-------------jQuery---------->
-		<script src="js/jquery-3.3.1.min.js"></script>
+	<!-------------jQuery---------->
 		
-		<!-------Popper.js------------->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        
-        <!-- owl carousel -------------------->
-        <script src="js/owl.carousel.min.js"></script>
-		<!----------BootStrap---------->
-        <script src="js/bootstrap.min.js"></script>
-        
 		
 		<!--------Main js--->
-		<script src="js/main.js"></script>
-		
+
+    
 </body>
 </html>    
