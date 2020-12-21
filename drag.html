@@ -49,17 +49,24 @@
     border-left: 2px solid #fff;
     right:0!important;
     top:0;
+    
+
      }
      .after-before-drag-btn0{
-       background:transparent;
-       width: 100% !important;
-       height: 100%!important;
-       position: relative;
-     }
+      background:transparent;
+      width: 756px !important;
+      height: 432px!important;
+      position: absolute;
+      top: 9px;
+      right: 305px;
+
+
+}
+     
      .after-before-drag-btn0 button{
       font-size: 30px;
     position: absolute;
-    z-index: 99;
+    z-index: 999;
     color: #000;
     background-color: #fff;
     height: 50px;
@@ -70,8 +77,9 @@
     border: none!important;
     outline: none!important;
     top: 43%;
-    right:348px;
+    right:356px;
      cursor: ew-resize;
+
      }
      .after-before-drag-btn0 button::before{
        content:'';
@@ -90,12 +98,12 @@
     <div class="after-before-drag-img0" id="afterimg">
     </div>
 
-    <div class="after-before-drag-btn0" id="parbtn">
-      <button id="ctrlbtn" >
-        <i class="fas fa-arrows-alt-h"></i></button>
-     </div>
-   </div>
    
+   </div>
+   <div class="after-before-drag-btn0 " id="parbtn">
+    <button id="ctrlbtn" >
+      <i class="fas fa-arrows-alt-h"></i></button>
+   </div>
  <script>
 dragElement(document.getElementById("afterimg"));
 
@@ -130,11 +138,23 @@ function dragElement(elmnt ) {
     pos1 = pos3 - e.clientX;
     pos3 = e.clientX;
     // set the element's new position:
+    if(pos3 > document.getElementById("aftercontainer").offsetLeft + 10 && pos3 < document.getElementById("aftercontainer").offsetLeft  + document.getElementById("aftercontainer").offsetWidth){
+      ctrlbtn.style.left =(elmnt.offsetLeft - pos1 - 20) + "px";
+      ctrlbtn.style.position = "absolute" ;
+      elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+      elmnt.style.width =aftercontainer.offsetWidth - (elmnt.offsetLeft - pos1) + "px";
 
-    ctrlbtn.style.left =(elmnt.offsetLeft - pos1) + "px";
-    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+    }else if(pos3 > document.getElementById("aftercontainer").offsetLeft + 10  && pos3 < document.getElementById("aftercontainer").offsetLeft + document.getElementById("aftercontainer").offsetWidth &&elmnt.style.width === "20px"){
+      ctrlbtn.style.left = document.getElementById("aftercontainer").offsetLeft + 760 ;
+      elmnt.style.left = document.getElementById("aftercontainer").offsetLeft + 760;
+      elmnt.style.width ="40 px";
+    }else{
+      ctrlbtn.style.left = document.getElementById("aftercontainer").offsetLeft + 30;
+      elmnt.style.left = document.getElementById("aftercontainer").offsetLef + 30;
+      elmnt.style.width ="780";
 
-    elmnt.style.width =aftercontainer.offsetWidth - (elmnt.offsetLeft - pos1) + "px";
+    }
+    
   }
 
   function closeDragElement() {
