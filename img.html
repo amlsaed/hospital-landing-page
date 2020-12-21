@@ -60,8 +60,10 @@
 }
 .gallery-slider img{
     width: 70%;
+    min-width: 30%;
+    max-width: 100%;
     height: 100vh;
-    margin: 0 15%;
+    margin: 0 auto;
 }
 .arrows{
     position:absolute;
@@ -134,29 +136,59 @@
     <div class="row">
           <div class="col">
             <div class="ctrls" id="ctrls">
-                <ul>
-                    <li>
+                <ul class="d-flex">
+                    <!-- social media -->
+                    <li class="dropdown">
                         <!-- share on social media -->
-                        <button><i class="fas fa-share-alt"></i></button>
-                        <!-- zoom out -->
-                        <button><i class="fas fa-search-minus"></i></button>
-                        <!-- zoom in -->
-                        <button><i class="fas fa-search-plus"></i></button>
-                        <!-- full screen -->
-                        <button><i class="fas fa-expand"></i></i></button>
-                        <!-- <button><i class="fas fa-compress"></i></i></button> -->
-                        <!-- play imgs -->
-                        <button><i class="far fa-play-circle"></i></button>
-                        <!-- download -->
-                        <button><i class="far fa-arrow-alt-circle-down"></i></button>
-                        <!-- close -->
-                        <button onclick="window.location.href='file:///home/aml/Desktop/madical%20project/index.html'"><i class="fas fa-times"></i></button>
+                        <button lass="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" 
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-share-alt"></i>
+                       </button>
+                       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#"><i class="fab fa-facebook-f"></i>facebook</a>
+                        <a class="dropdown-item" href="#"><i class="fab fa-linkedin-in"></i>linkedin</a>
+                        <a class="dropdown-item" href="#"><i class="fab fa-pinterest-p"></i>pinterest</a>
+                        <a class="dropdown-item" href="#"><i class="fab fa-twitter"></i>twitter</a>
+                      </div>
                     </li>
+                    <!-- resit size -->
+                    <li>
+                        <button onclick="resit()"><i class="fas fa-redo-alt"></i></button>
+                    </li>
+                    <!-- zoom out -->
+                    <li>
+                         <!-- zoom out -->
+                         <button onclick="zoomout()"><i class="fas fa-search-minus"></i></button>
+                    </li>
+                    <!-- zoom in -->
+                    <li>
+                         <button onclick="zoomin()"><i class="fas fa-search-plus"></i></button>
+                    </li>
+                     <!-- full screen -->
+                    <li>   
+                        <button onclick="openFullscreen()"><i class="fas fa-expand"></i></i></button>
+                    </li>
+                     <!-- play imgs -->
+                    <li>     
+                        <button><i class="far fa-play-circle"></i></button>
+                    </li>
+                     <!-- close -->
+                    <li> 
+                     <button onclick="window.location.href='index.html'"><i class="fas fa-times"></i></button>
+                    </li>
+                        
+                       
+                       
+                        
+                        <!-- <button><i class="fas fa-compress"></i></i></button> -->
+                        
+                        
+                    
+                    
                 </ul>
             </div>
-            <div class="col-12 gallery-slider" id="gallery-slider">
-               
-                <img src="./imgs/project1.jpg " class="" draggable="false">
+            <div class="col-12 gallery-slider d-flex justiy-content-center align-items-center" id="gallery-slider">
+                <img src="./imgs/project1.jpg " class="" draggable="false" id="imgzoom">
             </div>
             <div class="arrows">
                 <button class="nextbtn"><i class="fas fa-arrow-left"></i></button>
@@ -164,25 +196,36 @@
             </div>
           </div>
     </div>
-    <!-- scial media -->
-    <div class="socil-share">
-        <ul class="">
-            <li><a href="#"><i class="fab fa-facebook-f"></i>facebook</a></li>
-            <li><a href="#"><i class="fab fa-linkedin-in"></i>linkedin</a></li>
-            <li><a href="#"><i class="fab fa-pinterest-p"></i>pinterest</a></li>
-            <li><a href="#"><i class="fab fa-twitter"></i>twitter</a></li>
-        </ul>
-    </div>
+    
 
     
 </div>
 
 <script>
-    setimg();
-  function setimg(){
-      
-
+    function zoomout(){
+          var zoom = document.getElementById("imgzoom");
+          var imgwidth = zoom.clientWidth;
+          zoom.style.width= (imgwidth - 100) + "px"
+     }
+     function zoomin(){
+          var zoom = document.getElementById("imgzoom");
+          var imgwidth = zoom.clientWidth;
+          zoom.style.width= (imgwidth + 100) + "px"
+     }
+     function openFullscreen() {
+ var elem = document.getElementById("imgzoom");
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
   }
+}
+function resit(){
+    var resetimg = document.getElementById("imgzoom");
+          resetimg.style.width=  "75%"
+}
 </script>
 
 
