@@ -23,9 +23,7 @@
     <link rel="stylesheet" href="css/style.css"/>
    <style>
      .after-before-drag-bg0{
-      background: url(./imgs/before.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    
     max-width: 780px!important;
     height: 450px;
     margin-left: auto;
@@ -38,7 +36,7 @@
      }
      .after-before-drag-img0{
        min-width: 0;
-       max-width:99%;
+       max-width:103%;
       width: 382px;
     height: 103%;
     background:url(./imgs/after.jpg);
@@ -47,18 +45,32 @@
     background-position: right;
     position: absolute;
     border-left: 2px solid #fff;
+    right:1px!important;
+    top:0;
+    z-index: 99;
+
+     }
+     .after-before-drag-img1{
+      width: 780px;
+    height: 103%;
+    background:url(./imgs/before.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    position: absolute;
+    border-left: 2px solid #fff;
     right:0!important;
     top:0;
-    
+    /* z-index: 1000; */
 
      }
      .after-before-drag-btn0{
       background:transparent;
-      width: 756px !important;
+      width: 100% !important;
       height: 432px!important;
       position: absolute;
       top: 9px;
-      right: 305px;
+      right: 0px;
 
 
 }
@@ -79,6 +91,7 @@
     top: 43%;
     right:356px;
      cursor: ew-resize;
+     /* transition:linear .01s ; */
 
      }
      .after-before-drag-btn0 button::before{
@@ -94,16 +107,17 @@
 </head>
 <body >
   <div class="after-before-drag-bg0"  id="aftercontainer">
-    
+    <div class="after-before-drag-img1" >
+    </div>
     <div class="after-before-drag-img0" id="afterimg">
     </div>
-
+    <div class="after-before-drag-btn0 " id="parbtn">
+      <button id="ctrlbtn" >
+        <i class="fas fa-arrows-alt-h"></i></button>
+     </div>
    
    </div>
-   <div class="after-before-drag-btn0 " id="parbtn">
-    <button id="ctrlbtn" >
-      <i class="fas fa-arrows-alt-h"></i></button>
-   </div>
+  
  <script>
 dragElement(document.getElementById("afterimg"));
 
@@ -140,18 +154,17 @@ function dragElement(elmnt ) {
     // set the element's new position:
     if(pos3 > document.getElementById("aftercontainer").offsetLeft + 10 && pos3 < document.getElementById("aftercontainer").offsetLeft  + document.getElementById("aftercontainer").offsetWidth){
       ctrlbtn.style.left =(elmnt.offsetLeft - pos1 - 20) + "px";
-      ctrlbtn.style.position = "absolute" ;
-      elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-      elmnt.style.width =aftercontainer.offsetWidth - (elmnt.offsetLeft - pos1) + "px";
+      elmnt.style.left = (elmnt.offsetLeft - pos1  ) + "px";
+      elmnt.style.width =aftercontainer.offsetWidth - (elmnt.offsetLeft - pos1 + 30) + "px";
 
     }else if(pos3 > document.getElementById("aftercontainer").offsetLeft + 10  && pos3 < document.getElementById("aftercontainer").offsetLeft + document.getElementById("aftercontainer").offsetWidth &&elmnt.style.width === "20px"){
-      ctrlbtn.style.left = document.getElementById("aftercontainer").offsetLeft + 760 ;
-      elmnt.style.left = document.getElementById("aftercontainer").offsetLeft + 760;
+      ctrlbtn.style.left = document.getElementById("aftercontainer").offsetLeft + 750 ;
+      elmnt.style.left = document.getElementById("aftercontainer").offsetLeft + 750;
       elmnt.style.width ="40 px";
     }else{
-      ctrlbtn.style.left = document.getElementById("aftercontainer").offsetLeft + 30;
-      elmnt.style.left = document.getElementById("aftercontainer").offsetLef + 30;
-      elmnt.style.width ="780";
+      ctrlbtn.style.left = document.getElementById("aftercontainer").offsetLeft  ;
+      elmnt.style.left = document.getElementById("aftercontainer").offsetLef;
+      elmnt.style.width ="770";
 
     }
     
