@@ -22,6 +22,16 @@
     <!-------Custme-Css---------->
     <link rel="stylesheet" href="css/style.css"/>
    <style>
+     .drag-sec{
+       position: relative;
+       width: 780px!important;
+       height: 450px;
+       padding: 0!important;
+       margin-left: auto;
+       margin-right: auto;
+       background: red;
+       
+     }
      .after-before-drag-bg0{
     
     max-width: 780px!important;
@@ -45,13 +55,13 @@
     background-position: right;
     position: absolute;
     border-left: 2px solid #fff;
-    right:1px!important;
+    right:0!important;
     top:0;
     z-index: 99;
 
      }
      .after-before-drag-img1{
-      width: 780px;
+      width: 760px;
     height: 103%;
     background:url(./imgs/before.jpg);
     background-size: cover;
@@ -66,11 +76,11 @@
      }
      .after-before-drag-btn0{
       background:transparent;
-      width: 100% !important;
+      width: 756px !important;
       height: 432px!important;
       position: absolute;
       top: 9px;
-      right: 0px;
+      right:9px;
 
 
 }
@@ -89,7 +99,7 @@
     border: none!important;
     outline: none!important;
     top: 43%;
-    right:356px;
+    right:47%;
      cursor: ew-resize;
      /* transition:linear .01s ; */
 
@@ -103,20 +113,67 @@
        right: 300px;
        
      }
+     @media only screen and (max-width: 600px) {
+      .drag-sec{
+        max-width: 260px!important;
+    height: 250px;
+      }
+      .after-before-drag-bg0{
+    
+    max-width: 260px!important;
+    height: 250px;
+    
+     }
+     .after-before-drag-img0{
+      
+      width: 127px;
+    
+
+     }
+     .after-before-drag-img1{
+      width: 240px;
+    
+    /* z-index: 1000; */
+
+     }
+     .after-before-drag-btn0{
+      background:transparent;
+      width: 237px !important;
+    height: 229px!important;
+    position: absolute;
+    top: 11px;
+    right: 10px;
+
+
+}
+     
+     .after-before-drag-btn0 button{
+      font-size: 20px;
+   
+    height: 40px;
+    width: 40px;
+    padding: 8px 5px;
+    
+    right: 44%;
+
+     }
+     
+     }
    </style> 
 </head>
 <body >
-  <div class="after-before-drag-bg0"  id="aftercontainer">
-    <div class="after-before-drag-img1" >
-    </div>
-    <div class="after-before-drag-img0" id="afterimg">
-    </div>
-    <div class="after-before-drag-btn0 " id="parbtn">
+  <div class="drag-sec" id="aftercontainer">
+    <div class="after-before-drag-bg0"  id="">
+      <div class="after-before-drag-img1" >
+      </div>
+      <div class="after-before-drag-img0" id="afterimg">
+      </div>
+     </div>
+     <div class="after-before-drag-btn0 " id="parbtn">
       <button id="ctrlbtn" >
         <i class="fas fa-arrows-alt-h"></i></button>
      </div>
-   
-   </div>
+  </div>
   
  <script>
 dragElement(document.getElementById("afterimg"));
@@ -151,20 +208,23 @@ function dragElement(elmnt ) {
     // calculate the new cursor position:
     pos1 = pos3 - e.clientX;
     pos3 = e.clientX;
+    var xleft = document.getElementById("aftercontainer").offsetLeft;
+    var xwidth = document.getElementById("aftercontainer").offsetWidth;
     // set the element's new position:
-    if(pos3 > document.getElementById("aftercontainer").offsetLeft + 10 && pos3 < document.getElementById("aftercontainer").offsetLeft  + document.getElementById("aftercontainer").offsetWidth){
-      ctrlbtn.style.left =(elmnt.offsetLeft - pos1 - 20) + "px";
-      elmnt.style.left = (elmnt.offsetLeft - pos1  ) + "px";
-      elmnt.style.width =aftercontainer.offsetWidth - (elmnt.offsetLeft - pos1 + 30) + "px";
+    if(pos3 > xleft + 10 && pos3 < xleft  + xwidth -20 ){
+      ctrlbtn.style.left =(elmnt.offsetLeft - pos1 -25) + "px";
+      ctrlbtn.style.position = "absolute" ;
+      elmnt.style.left = (elmnt.offsetLeft - pos1   ) + "px";
+      elmnt.style.width = xwidth - (elmnt.offsetLeft - pos1 +20  ) + "px";
 
-    }else if(pos3 > document.getElementById("aftercontainer").offsetLeft + 10  && pos3 < document.getElementById("aftercontainer").offsetLeft + document.getElementById("aftercontainer").offsetWidth &&elmnt.style.width === "20px"){
-      ctrlbtn.style.left = document.getElementById("aftercontainer").offsetLeft + 750 ;
-      elmnt.style.left = document.getElementById("aftercontainer").offsetLeft + 750;
-      elmnt.style.width ="40 px";
+    }else if(pos3 > xleft + 10  && pos3 < xleft + xwidth -20 &&elmnt.style.width === "20px"){
+      ctrlbtn.style.left = xleft + xwidth -20 ;
+      elmnt.style.left = xleft + xwidth -20 ;
+      elmnt.style.width ="60 px";
     }else{
-      ctrlbtn.style.left = document.getElementById("aftercontainer").offsetLeft  ;
-      elmnt.style.left = document.getElementById("aftercontainer").offsetLef;
-      elmnt.style.width ="770";
+      ctrlbtn.style.left = xleft  ;
+      elmnt.style.left = xleft;
+      elmnt.style.width = xwidth-20;
 
     }
     

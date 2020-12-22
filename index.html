@@ -26,27 +26,24 @@
 </head>
 <body>
     <!-- header -->
-<header class="container-fluid">
+<header class="container-fluid ">
     <!-- first nav -->
-        <div class="row first-nav  d-flex  d-md-none d-lg-flex justiy-content-center">
-            <div class="col-1  layout"></div>
-            <div class="col-8 ">
+        <div class="row px-5 first-nav d-flex justiy-content-center align-items-center">
+            <div class="col-10">
                 <ul class="">
                     <li><i class="far fa-envelope"></i>  <span>info@nischinto.com</span></li>
                     <li><i class="fas fa-phone-alt"></i>  <span>+01 - 234 567 890</span></li>
                 </ul>
             </div>
-            <div class="col-1  text-right">
-                <a href="drag.html" class="Appointments-link">Appointments</a>
+            <div class="col-2  ">
+                <a href="#appointments" class="Appointments-link">Appointments</a>
             </div>
-            <div class="col-2  layout"></div>
 
         </div>
         <!-- sec nav -->
-        <nav class="row  navbar navbar-expand-lg navbar-light " id="navFixed" >
+        <nav class="row px-5 navbar navbar-expand-lg navbar-light d-flex justiy-content-center align-items-center" id="navFixed" >
             <!-- nav brand -->
-            <div class="col-1  layout"></div>
-            <a class="navbar-brand col-4 " href="#" >
+            <a class="navbar-brand  col-6 " href="#" >
                 <img src="imgs/logo.png" alt="log">
             </a>
             <!-- nav button -->
@@ -54,7 +51,7 @@
                 <span class="navbar-toggler-icon"></span>
               </button>
               <!-- nav links -->
-           <div class="collapse navbar-collapse col-6 ml-4" id="navbarNavDropdown">
+           <div class="collapse navbar-collapse col-5 " id="navbarNavDropdown">
             <ul class="navbar-nav " id="navbarSupportedContent" >
                 <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
@@ -66,7 +63,6 @@
                 <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
             </ul>
            </div>   
-           <div class="col-1 layout"></div>
 
         </nav>
             <div class="row slider-container w-100 " id="home">
@@ -79,10 +75,10 @@
                             treatment for
                              <span id="herotitle" class="animated rollOut infinte">Crutches</span>
                             </p> 
-                        <p class="slider-words pt-5">
+                        <p class="slider-words pt-md-5">
                          The art of medicine consists in amusing the patient while nature cures the disease. 
                         </p>
-                        <p class="slider-words pb-5">Treatment without prevention is simply unsustainable.</p>
+                        <p class="slider-words pb-md-5 pb-5 ">Treatment without prevention is simply unsustainable.</p>
                         <a class="slider-link mb-5" href="#">Appointments</a>  
                         <div class="slider-icons ">
                             <ul class="">
@@ -249,47 +245,44 @@
             <p class="department-first-paragraph pb-4"> Lorem Ipsum the industry's standard dummy text.</p>
         </div>
     </div>
-    <div class="row mt-5">
-      <div class="container">
-            <div class="row">
-                  <div class="col-md department-tabs-container">
-                      <ul class="nav nav-tabs row" id="myTab" role="tablist" >
-                          <li class="nav-item text-center col">
+    <div class="row department-tabs-container d-flex justiy-content-center align-items-center mt-5">
+                      <ul class="nav nav-tabs  " id="myTab" role="tablist" >
+                          <li class="nav-item text-center ">
                               <a class="nav-link active aqua" id="crutches-tab" data-toggle="tab" href="#crutches" 
                               role="tab" aria-controls="crutches" aria-selected="true">
                               <i class="fas fa-crutch d-block"></i>
                               Crutches
                             </a>
                           </li>
-                          <li class="nav-item text-center col">
+                          <li class="nav-item text-center ">
                             <a class="nav-link rose" id="xray-tab" data-toggle="tab" href="#xray" 
                             role="tab" aria-controls="xray" aria-selected="true">
                             <i class="fas fa-x-ray d-block"></i>
                             X-ray
                           </a>
                         </li>
-                        <li class="nav-item text-center col-md">
+                        <li class="nav-item text-center ">
                             <a class="nav-link lightgreen" id="pulmonary-tab" data-toggle="tab" href="#Pulmonary" 
                             role="tab" aria-controls="Pulmonary" aria-selected="true">
                             <i class="fas fa-heartbeat d-block"></i>
                             Pulmonary
                           </a>
                         </li>
-                        <li class="nav-item text-center col">
+                        <li class="nav-item text-center ">
                             <a class="nav-link lightpurpel" id="cardiology-tab" data-toggle="tab" href="#cardiology" 
                             role="tab" aria-controls="cardiology" aria-selected="true">
                             <i class="fas fa-lungs d-block"></i>
                             Cardiology
                           </a>
                         </li>
-                        <li class="nav-item text-center col">
+                        <li class="nav-item text-center ">
                             <a class="nav-link lightorange" id="dentalCare-tab" data-toggle="tab" href="#dentalCare" 
                             role="tab" aria-controls="dentalCare" aria-selected="true">
                             <i class="fas fa-tooth d-block"></i>
                             DentalCare 
                          </a>
                         </li>
-                        <li class="nav-item text-center text-center col">
+                        <li class="nav-item text-center text-center ">
                             <a class="nav-link lightgray" id="neurology-tab" data-toggle="tab" href="#neurology" 
                             role="tab" aria-controls="neurology" aria-selected="true">
                             <i class="fas fa-brain d-block"></i>
@@ -298,9 +291,7 @@
                         </li>
     
                       </ul>
-                  </div>
-            </div>
-            <div class="row mt-5">
+    <div class="row mt-5">
                  <div class="col-md">
                     <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade show active" id="crutches" role="tabpanel" aria-labelledby="crutches-tab">
@@ -469,8 +460,7 @@
                             </div>
                       </div>
                  </div>
-            </div>
-      </div>
+    </div>
     </div>
 
 </section>
@@ -899,14 +889,18 @@
     </div>
     <div class="row ">
        <div class="col ">
-           <div class="after-before-drag-bg" id="parentDrag">
-               <div class="after-before-drag-btn">
-                   <button id="btnDrag"><i class="fas fa-arrows-alt-h"></i></button>
-               </div>
-               <div class="after-before-drag-img" id="imdToDrag">
-                <!-- <img src="./imgs/after.jpg" alt=after/> -->
-            </div>
-           </div>
+        <div class="drag-sec" id="aftercontainer">
+            <div class="after-before-drag-bg0"  id="">
+              <div class="after-before-drag-img1" >
+              </div>
+              <div class="after-before-drag-img0" id="afterimg">
+              </div>
+             </div>
+             <div class="after-before-drag-btn0 " id="parbtn">
+              <button id="ctrlbtn" >
+                <i class="fas fa-arrows-alt-h"></i></button>
+             </div>
+          </div>
        </div>
     </div>
 </section>

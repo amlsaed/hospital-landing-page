@@ -122,4 +122,64 @@ function changeimg(){
     }
 }
 setInterval(changeimg,1000)
-//nav active color
+//drag img
+dragElement(document.getElementById("afterimg"));
+
+function dragElement(elmnt ) {
+  var ctrlbtn = document.getElementById("ctrlbtn");
+  var aftercontainer = document.getElementById("aftercontainer");
+  var afterimg = document.getElementById("afterimg");
+  
+  var pos1 = 0, pos3 = 0;
+  if (ctrlbtn && afterimg.offsetWidth < 500) {
+    // if present, the header is where you move the DIV from:
+    ctrlbtn.onmousedown = dragMouseDown;
+  } else {
+    // otherwise, move the DIV from anywhere inside the DIV:
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos3 = e.clientX;
+    var xleft = document.getElementById("aftercontainer").offsetLeft;
+    var xwidth = document.getElementById("aftercontainer").offsetWidth;
+    // set the element's new position:
+    if(pos3 > xleft + 10 && pos3 < xleft  + xwidth -20 ){
+      ctrlbtn.style.left =(elmnt.offsetLeft - pos1 -25) + "px";
+      ctrlbtn.style.position = "absolute" ;
+      elmnt.style.left = (elmnt.offsetLeft - pos1   ) + "px";
+      elmnt.style.width = xwidth - (elmnt.offsetLeft - pos1 +20  ) + "px";
+
+    }else if(pos3 > xleft + 10  && pos3 < xleft + xwidth -20 &&elmnt.style.width === "20px"){
+      ctrlbtn.style.left = xleft + xwidth -20 ;
+      elmnt.style.left = xleft + xwidth -20 ;
+      elmnt.style.width ="60 px";
+    }else{
+      ctrlbtn.style.left = xleft  ;
+      elmnt.style.left = xleft;
+      elmnt.style.width = xwidth-20;
+
+    }
+    
+  }
+
+  function closeDragElement() {
+    // stop moving when mouse button is released:
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
