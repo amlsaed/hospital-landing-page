@@ -53,14 +53,14 @@
               <!-- nav links -->
            <div class="collapse navbar-collapse col-5 " id="navbarNavDropdown">
             <ul class="navbar-nav " id="navbarSupportedContent" >
-                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#department">Department</a></li>
-                <li class="nav-item"><a class="nav-link" href="#doctors">Doctors</a></li>
-                <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
-                <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
-                <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="#home" id="navlink1" onscroll="navcolor()">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about" id="navlink2" onscroll="navcolor()">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#department" id="navlink3" onscroll="navcolor()">Department</a></li>
+                <li class="nav-item"><a class="nav-link" href="#doctors" id="navlink4" onscroll="navcolor()">Doctors</a></li>
+                <li class="nav-item"><a class="nav-link" href="#gallery" id="navlink5" onscroll="navcolor()">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="#pricing" id="navlink6" onscroll="navcolor()">Pricing</a></li>
+                <li class="nav-item"><a class="nav-link" href="#blog" id="navlink7" onscroll="navcolor()">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact" id="navlink8" onscroll="navcolor()">Contact</a></li>
             </ul>
            </div>   
 
@@ -298,7 +298,7 @@
                               <div class="container mt-5">
                                   <div class="row">
                                     <div class="col-md">
-                                        <img src="./imgs/crutches.png" alt="department-img" />
+                                        <img src="./imgs/crutches.png" alt="department-img" class="img-fluid"/>
                                     </div>
                                     <div class="col-md department-details">
                                         <h3>Welcome to our  <span class="department-title-color">Crutches</span> </h3>
@@ -326,7 +326,7 @@
                             <div class="container mt-5">
                                 <div class="row">
                                   <div class="col-md">
-                                      <img src="./imgs/xray.png" alt="department-img" />
+                                      <img src="./imgs/xray.png" alt="department-img" class="img-fluid"/>
                                   </div>
                                   <div class="col-md department-details">
                                       <h3>Welcome to our  <span class="department-title-color">X-ray</span> </h3>
@@ -353,7 +353,7 @@
                             <div class="container mt-5">
                                 <div class="row">
                                   <div class="col-md">
-                                      <img src="./imgs/pulmonary.png" alt="department-img" />
+                                      <img src="./imgs/pulmonary.png" alt="department-img" class="img-fluid"/>
                                   </div>
                                   <div class="col-md department-details">
                                       <h3>Welcome to our  <span class="department-title-color">Pulmonary</span> </h3>
@@ -380,7 +380,7 @@
                             <div class="container mt-5">
                                 <div class="row">
                                   <div class="col-md">
-                                      <img src="./imgs/cardiology.png" alt="department-img" />
+                                      <img src="./imgs/cardiology.png" alt="department-img" class="img-fluid"/>
                                   </div>
                                   <div class="col-md department-details">
                                       <h3>Welcome to our  <span class="department-title-color">Cardiology</span> </h3>
@@ -407,7 +407,7 @@
                             <div class="container mt-5">
                                 <div class="row">
                                   <div class="col-md">
-                                      <img src="./imgs/dental-care.png" alt="department-img" />
+                                      <img src="./imgs/dental-care.png" alt="department-img" class="img-fluid"/>
                                   </div>
                                   <div class="col-md department-details">
                                       <h3>Welcome to our  <span class="department-title-color">Dental Care</span> </h3>
@@ -436,7 +436,7 @@
                             <div class="container mt-5">
                                 <div class="row">
                                   <div class="col-md">
-                                      <img src="./imgs/neurology.png" alt="department-img" />
+                                      <img src="./imgs/neurology.png" alt="department-img" class="img-fluid"/>
                                   </div>
                                   <div class="col-md department-details">
                                       <h3>Welcome to our  <span class="department-title-color">Neurology</span> </h3>
@@ -481,7 +481,7 @@
         <form class="mx-auto w-75">
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="inputname">your name</label>
+                    <label for="inputname">Your Name</label>
                         <input type="text" class="form-control" placeholder="First name" id="inputname">
                       </div>
               <div class="form-group col-md-6">
@@ -492,7 +492,7 @@
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="inputphone">your num</label>
+                    <label for="inputphone">Your Num</label>
                         <input type="tel" class="form-control" placeholder="+020 10000000" id="inputphone">
                       </div>
               <div class="form-group col-md-6">
@@ -503,7 +503,7 @@
             </div>
             <div class="form-row">
                 <div class="form-group col">
-                    <label for="selectdapartment">departments</label>
+                    <label for="selectdapartment">Departments</label>
                     <div class="dropdown w-100" id="selectdapartment">
                         <button class="btn  dropdown-toggle w-100 text-left" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                               select department
@@ -538,14 +538,14 @@
             </div>
             <div class="form-row">
                 <div class="form-group col-12">
-                    <label for="inputmessage">message</label>
+                    <label for="inputmessage">Message</label>
                     <textarea class="form-control" placeholder="your message" id="inputmessage" rows="4"></textarea>
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-2">
                     <button type="submit" class="form-control btn form-btn">
-                          confirm
+                          Confirm
                     </button>
                 </div>
               
@@ -565,8 +565,8 @@
             <p class="doctors-first-paragraph pb-4"> Lorem Ipsum the industry's standard dummy text.</p>
         </div>
     </div>
-    <div class="row">
-        <div class="owl-carousel container" id="owl-carousel1">
+    <div class="row d-flex justiy-content-center align-items-center">
+        <div class="owl-carousel container d-flex justiy-content-center align-items-center" id="owl-carousel1">
             <!-- owl item  -->
             <div> 
                 <div class="doctors-detail text-center">
@@ -800,7 +800,7 @@
               <div class="row tab-content mt-5" id="nav-tabContent">
                 <div class="container tab-pane fade show active" id="All" role="tabpanel" aria-labelledby="All-tab">
                     <div class="row  ">
-                        <div class="col  gallery-col">
+                        <div class="col-md  gallery-col">
                             <div class="row py-3 gallery-row">
                                 <a href="#" class="gallery-pic ">
                                     <img src="./imgs/project1.jpg" alt="img"/>
@@ -818,7 +818,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="col  gallery-col">
+                        <div class="col-md  gallery-col">
 
                             <div class="row py-3 gallery-row">
                                 <a href="#">
@@ -845,7 +845,7 @@
                                 </a>
                                 </div>
                         </div>
-                        <div class="col gallery-col ">
+                        <div class="col-md gallery-col ">
                             <div class="row py-3 gallery-row" >
                                 <a href="#"><img src="./imgs/project3.jpg" alt="img"/>
                                     <div class="gallery-link-overlay">
@@ -1196,8 +1196,8 @@
 <!-- questions ------------------------------------------------------------------------------->
 <section class="container-fluid questions" id="questions">
      <div class="row questions-row  ">
-         <div class="col-md px-5">
-             <img src="./imgs/faq-img.png" class="w-75 py-5 "/>
+         <div class="col-md ">
+             <img src="./imgs/faq-img.png" class="img-fluid "/>
          </div>
          <div class="col md">
              <h3 class="mt-5">Just Answer the Questions</h3>
@@ -1206,7 +1206,7 @@
             <div class="card mb-3">
               <div class="card-header" id="headingOne">
                 <h2>
-                  <button class="btn text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <button class="btn btn-link btn-block text-left text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                     What is Medi solution?
                   </button>
                 </h2>
@@ -1499,7 +1499,7 @@
         <form class="mx-auto w-75">
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="inputname">your name</label>
+                    <label for="inputname">Your Name</label>
                         <input type="text" class="form-control" placeholder="First name" id="inputname">
                       </div>
               <div class="form-group col-md-6">
@@ -1511,11 +1511,11 @@
             <div class="form-row">
                 
               <div class="form-group col-md-6">
-                <label for="contact-contact-inputphone">subject</label>
+                <label for="contact-contact-inputphone">Subject</label>
                 <input type="text" class="form-control" placeholder="subject" id="contact-inputbookingdate">
               </div>
               <div class="form-group col-md-6">
-                <label for="contact-inputphone">your num</label>
+                <label for="contact-inputphone">Your Num</label>
                     <input type="tel" class="form-control" placeholder="+020 10000000" id="contact-inputphone">
                   </div>
               
@@ -1523,14 +1523,14 @@
            
             <div class="form-row">
                 <div class="form-group col-12">
-                    <label for="contact-inputmessage">message</label>
+                    <label for="contact-inputmessage">Message</label>
                     <textarea class="form-control" placeholder="your message" id="contact-inputmessage" rows="4"></textarea>
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-2">
                     <button type="submit" class="form-control btn form-btn">
-                          send message
+                          Send Message
                     </button>
                 </div>
               

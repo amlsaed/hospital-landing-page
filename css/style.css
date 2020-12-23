@@ -1,11 +1,20 @@
 body{
-   font-family: antialiased;
-   overflow-x: hidden;
+    color: #666;
+    background-color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.6em;
+    overflow-x: hidden;
 }
 a{text-decoration: none;}
 a:hover{
     text-decoration: none;
     cursor: pointer;
+}
+.row{
+    margin-right: 0!important;
+    margin-left: 0!important;
 }
 /* header */
 header{
@@ -58,6 +67,10 @@ nav{
    margin-left: 0!important;
    margin-right: 0!important;
 
+}
+nav .nav-link{
+    font-weight: 600;
+    transition: all 1s ease-in-out;
 }
 nav .nav-link:hover{
     color: #0cb8b6!important;
@@ -372,6 +385,8 @@ color: #e6492d ;
     font-size: 16px;
     color: #000;
     font-weight: bold;
+    margin: 20px 5px;
+    position: relative;
 }
 .department-tabs-container .nav-link i{
     font-size: 40px;
@@ -383,7 +398,21 @@ color: #e6492d ;
 .department-tabs-container .nav-link.active i{
     color: #fff!important;
 }
-
+.department-tabs-container .nav-link.active::before {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    bottom: -9px;
+    left: 50%;
+    -webkit-transform: translateX(-50%) rotate(45deg);
+    transform: translateX(-50%) rotate(45deg);
+    border-radius: 0px 0px 7px 0px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    background: inherit;
+    z-index: 1;
+}
 /* aqua */
 .aqua{
     background-color: #e7f7f8!important;
@@ -517,6 +546,28 @@ color: #e6492d ;
     background-position: bottom;
     background-size: contain;
 }
+.form-bg label{
+    font-size: 15px;
+    font-weight: 500;
+    color: #666;
+    margin-bottom: 3px;
+}
+.form-bg input[placeholder]{
+    height: 42px;
+    border: 1px solid #eaeaea;
+    border-radius: 7px;
+    width: 100%;
+    padding: 10px 15px;
+    color: #666;
+}
+.form-bg textarea{
+    height: 150px;
+    border: 1px solid #eaeaea;
+    border-radius: 7px;
+    width: 100%;
+    padding: 10px 15px;
+    color: #111;
+}
 .dropdown button{
     background-color: #fff;
     color:#9ea0a5;
@@ -594,6 +645,8 @@ color: #e6492d ;
  border: 1px solid #eee;
  width: 250px;
  overflow: hidden;
+ margin-right: auto;
+ margin-left: auto;
 
 }
 .doctors-names{
@@ -847,7 +900,6 @@ color: #e6492d ;
        padding: 0!important;
        margin-left: auto;
        margin-right: auto;
-       background: red;
        
      }
      .after-before-drag-bg0{
@@ -876,6 +928,7 @@ color: #e6492d ;
     right:0!important;
     top:0;
     z-index: 99;
+    left:auto!important;
 
      }
      .after-before-drag-img1{
@@ -1262,6 +1315,16 @@ transform: scaleY(1.1);
     background-repeat: no-repeat;
     padding: 100px 70px 50px 70px;
 
+}
+.card-header {
+    padding: 0px 16px;
+    background-color: rgb(12 184 182);
+}
+.card-header button{
+    color: #fff;
+}
+.card-body{
+    color:#666;
 }
 /*subscribe **************************************************************** */
 
@@ -1792,10 +1855,17 @@ footer{
 .about {
     margin-top: 20px;
 }
-.about-title ,.department-title{
+.about-title ,.department-title,.doctors-titleو.gallery-title,.after-before-title,.clients-title{
     font-size: 35px;
 }
-.about-logo-container::after ,.department-logo-container::after{
+.about-logo-container::after ,
+.department-logo-container::after,
+.doctors-logo-container::after,
+.gallery-logo-container::after,
+.after-before-logo-container::after,
+.clients-logo-container::after,
+.pricing-logo-container::after
+{
     content: "";
     width: 50px!important;
     height: 3px;
@@ -1805,7 +1875,14 @@ footer{
     right: 30%;
     border-radius: 5px;
 }
-.about-logo-container::before ,.department-logo-container::before {
+.about-logo-container::before ,
+.department-logo-container::before
+,.doctors-logo-container::before,
+.gallery-logo-container::before ,
+.after-before-logo-container::before,
+.clients-logo-container::before,
+.pricing-logo-container::before
+{
     content: "";
     width: 50px!important;
     height: 3px;
@@ -1816,7 +1893,9 @@ footer{
     left: 30%;
     border-radius: 5px;
 }
-.about-first-paragraph ,.department-first-paragraph{
+.about-first-paragraph ,.department-first-paragraph , .doctors-first-paragraph
+, .gallery-first-paragraph,.after-before-first-paragraph,.clients-first-paragraph
+,.pricing-first-paragraph{
     line-height: 1rem;
 }
 .about-title2 {
@@ -1825,9 +1904,12 @@ footer{
 /* department********************** */
 .department-tabs-container .nav-tabs{
    overflow-x: scroll;
-   width:100%;
+   overflow-y: hidden;
+   width:90%;
    flex-wrap: nowrap;
    display: flex;
+   margin: auto;
+   justify-content: center;
 }
 
 /* before after ******************* */
@@ -1874,7 +1956,24 @@ footer{
   right: 44%;
 
    }
-   
+   /* video */
+   .countdown-video {
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 90%;
+    height: 300px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0;
+}
+   }
+   /* count down */
+   .count-table{
+       padding: 0;
+   }
+   .questions-row{
+       padding: 10px;
    }
 
 /* colors
